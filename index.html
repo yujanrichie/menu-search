@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commits</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header container-fluid">
+        <section class="header__bar row g-0">
+            <div class="col-2 col-sm-3 icon__container">
+                <div class="icon__menu"></div>
+                <div id="main-search-icon" class="icon__search" onClick="showSearchModal()"></div>
+            </div>
+            <div class="col-6 col-sm-6 icon__container">
+                <img class="icon__brand" src="assets/icons/brand.svg" alt="mama earth">
+            </div>
+            <div class="col-4 col-sm-3 icon__container">
+                <div class="icon__user">
+                    <div class="icon__chevron"></div>
+                </div>
+                <div class="icon__basket">
+                    <span class="basket__count">2</span>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <section id="search-modal" class="search__modal">
+        <div class="search__input">
+            <div class="icon__search"></div>
+            <input type="text" placeholder="Find good food..." onInput="handleSearchInput(this.value)">
+            <i class="icon__close fa fa-times" onClick="closeSearchModal()"></i>
+        </div>
+        <section class="search__popular">
+            <h6>Popular searches lately</h6>
+            <div class="popular__list">
+                <div class="popular__item">
+                    <button><i class="fa fa-search"></i>quiche</button>
+                </div>
+                <div class="popular__item">
+                    <button><i class="fa fa-search"></i>chicken pot pie</button>
+                </div>
+                <div class="popular__item">
+                    <button><i class="fa fa-search"></i>hazelnut</button>
+                </div>
+                <div class="popular__item">
+                    <button><i class="fa fa-search"></i>apricot</button>
+                </div>
+                <div class="popular__item">
+                    <button><i class="fa fa-search"></i>thanksgiving</button>
+                </div>
+                <div class="popular__item">
+                    <button><i class="fa fa-search"></i>bagels</button>
+                </div>
+            </div>
+        </section>
+        <section class="search__expanded">
+            <div class="result__list">
+                <div class="result__item">
+                    <img src="assets/images/0316e92d-adf6-4974-af9f-9f8ac4620a56.jpeg" alt="berry jam">
+                    <span class="item__name">Berry Jam</span>
+                </div>
+                <div class="result__item">
+                    <img src="assets/images/32a1d020-f31c-4c3d-926f-815af6ec546c.jpeg" alt="cucumber">
+                    <span class="item__name">Cucumber</span>
+                </div>
+                <div class="result__item">
+                    <img src="assets/images/6a328f20-2efb-4f17-94f6-f73d7bd9d94e.jpeg" alt="pizza">
+                    <span class="item__name">Celtic (Multi-Grain Sourdough Bread, Sliced)</span>
+                </div>
+                <div class="result__item">
+                    <img src="assets/images/07e95f33-b20e-4a75-bce0-6c38082f7374.jpeg" alt="bacon">
+                    <span class="item__name">Bacon</span>
+                </div>
+                <div class="result__item">
+                    <img src="assets/images/92ccb432-888b-4ec6-aaaa-54a7a8ef4420Temp.jpeg" alt="berries">
+                    <span class="item__name">Berries</span>
+                </div>
+                <div class="result__item">
+                    <img src="assets/images/78552b98-2a90-4657-83af-63ada056d84e.jpeg" alt="basil leaves">
+                    <span class="item__name">Basil Leaves</span>
+                </div>
+                <div class="result__item">
+                    <img src="assets/images/e8e9682e-092c-45ea-bd3a-079238dfacf3.jpeg" alt="steak">
+                    <span class="item__name">Steak</span>
+                </div>
+            </div>
+            <hr class="horizontal__divider">
+            <div class="search__viewall">
+                <a href="#">View all results</a>
+            </div>
+        </section>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
